@@ -9,6 +9,7 @@ val Teal200 = Color(0xFF03DAC5)
 
 // Theme Color
 val appGreenColor = Color(0xFF4AA96C)
+val appGreenColor2 = Color(0xDD28874A)
 val appBlueColor = Color(0xFF0A79DF)
 val appPurpleColor = Color(0xFF9949d6)
 val appOrangeColor = Color(0xFFFF4C29)

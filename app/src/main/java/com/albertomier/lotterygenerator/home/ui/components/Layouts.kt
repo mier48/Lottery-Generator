@@ -25,7 +25,7 @@ fun BoxNumber(text: String) {
                 border = ButtonDefaults.outlinedBorder,
                 shape = RoundedCornerShape(4.dp)
             )
-            .padding(12.dp)
+            .padding(8.dp)
     ) {
         Text(
             text = text,

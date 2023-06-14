@@ -41,19 +41,19 @@ fun BottomAppBarMain(
     val items = listOf(
         BottomAppBarItem(
             route = Home.route,
-            icon = R.drawable.euromillones,
+            icon = R.drawable.euromillones_logo,
             title = "Euromillones"
         ),
 
         BottomAppBarItem(
             route = LaPrimitiva.route,
-            icon = R.drawable.la_primitiva,
+            icon = R.drawable.primitiva_logo,
             title = "La Primitiva"
         ),
 
         BottomAppBarItem(
             route = Bonoloto.route,
-            icon = R.drawable.bonoloto,
+            icon = R.drawable.bonoloto_logo,
             title = "Bonoloto"
         ),
 
@@ -63,11 +63,10 @@ fun BottomAppBarMain(
 //            title = "El Gordo"
 //        )
     )
-    BottomNavigation(elevation = 10.dp, backgroundColor = MaterialTheme.colors.background) {
+    BottomNavigation(elevation = 10.dp, backgroundColor = androidx.compose.material3.MaterialTheme.colorScheme.primary) {
         items.forEachIndexed { index, item ->
             BottomNavigationItem(
                 icon = { Icon(painter = painterResource(item.icon), contentDescription = "") },
-                label = { Text(text = item.title, style = MaterialTheme.typography.caption) },
                 selected = (currentRoute == item.route),
                 onClick = {
                     if (currentRoute != item.route) {

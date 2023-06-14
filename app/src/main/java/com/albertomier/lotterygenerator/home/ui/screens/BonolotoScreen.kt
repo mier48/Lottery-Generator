@@ -7,6 +7,8 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -33,17 +35,19 @@ fun BonolotoScreen(viewModel: HomeViewModel) {
 
     val bonolotoNumbersList: List<Int> by viewModel.bonolotoNumbersList.observeAsState(initial = emptyList())
     val bonolotoReintegroList: List<Int> by viewModel.bonolotoReintegroList.observeAsState(initial = emptyList())
-    val bonolotoComplementarioList: List<Int> by viewModel.bonolotoComplementarioList.observeAsState(initial = emptyList())
+    val bonolotoComplementarioList: List<Int> by viewModel.bonolotoComplementarioList.observeAsState(
+        initial = emptyList()
+    )
     val loading: Boolean by viewModel.loading.observeAsState(initial = false)
 
     Scaffold(modifier = Modifier.fillMaxSize()) {
-        Column {
+        Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
             Column(
                 verticalArrangement = Arrangement.spacedBy(8.dp),
                 modifier = Modifier.padding(12.dp)
             ) {
                 DefaultImage(
-                    drawable = R.drawable.bonoloto,
+                    drawable = R.drawable.bonoloto_logo,
                     modifier = Modifier.fillMaxWidth(),
                     contentScale = ContentScale.FillWidth
                 )

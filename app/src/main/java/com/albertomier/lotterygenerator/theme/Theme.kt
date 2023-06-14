@@ -43,10 +43,10 @@ private val DarkColorScheme = darkColorScheme(
 )
 
 private val LightColorScheme = lightColorScheme(
-    primary = appRedColor2,
+    primary = appGreenColor,
     onPrimary = Black,
-    secondary = PurpleGrey40,
-    tertiary = Pink40,
+    secondary = White,
+    tertiary = appGreenColor2,
     background = White,
     onBackground = Black,
     surface = White,
@@ -98,7 +98,7 @@ private val LightRedColorPalette = lightColorScheme(
 fun ComposeUIKitTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     dynamicColor: Boolean = true,
-    statusBarColor: Color = LightColorScheme.primary,
+    statusBarColor: Color = LightColorScheme.tertiary,
     content: @Composable () -> Unit,
 ) {
     val view = LocalView.current
